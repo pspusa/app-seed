@@ -1,24 +1,56 @@
 {
-  "name": "repo-template",
+  "name": "app-seed",
   "version": "0.0.1",
-  "description": "\"PSP 2.0 project / repo template and common files\"",
+  "description": "\"PSP 2.0 app seed / starter template and common files\"",
   "main": "index.js",
-  "repository": "git@github.com:pspusa/repo-template.git",
+  "repository": "git@github.com:pspusa/app-seed.git",
   "author": "daniel.bodnar@perspectives.org",
   "license": "MIT",
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "start": "concurrently 'npm run serve' 'npm run docs:dev'",
+    "serve": "vue-cli-service serve --open",
+    "build": "vue-cli-service build && cd dist && surge $(pwd) app-seed.psplabs.org && open https://app-seed.psplabs.org && cd .."
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
+    "apollo-cache-inmemory": "^1.2.6",
+    "apollo-client": "^2.3.7",
+    "apollo-link-http": "^1.5.4",
+    "babel-runtime": "^6.26.0",
+    "buefy": "^0.6.6",
+    "bulma-extensions": "^2.2.1",
+    "config": "^2.0.1",
+    "font-awesome": "^4.7.0",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.9.2",
+    "highlight.js": "^9.12.0",
+    "marked": "^0.4.0",
+    "url": "^0.11.0",
+    "vue": "^2.5.16",
+    "vue-affix": "^0.2.4",
+    "vue-apollo": "^3.0.0-beta.19",
+    "vue-markdown": "^2.2.4",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "vuepress": "^0.14.4",
+    "@vue/cli-plugin-babel": "^3.0.0-beta.15",
+    "@vue/cli-service": "^3.0.0-beta.15",
     "bulma": "^0.7.1",
+    "concurrently": "^4.0.1",
     "markdown-it-abbr": "^1.0.4",
     "markdown-it-deflist": "^2.0.3",
     "markdown-it-footnote": "^3.0.1",
     "markdown-it-ins": "^2.0.0",
     "markdown-it-mark": "^2.0.0",
     "markdown-it-sub": "^1.0.0",
-    "markdown-it-sup": "^1.0.0"
+    "markdown-it-sup": "^1.0.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "vue-template-compiler": "^2.5.16",
+    "vuepress": "^0.14.4"
   }
 }

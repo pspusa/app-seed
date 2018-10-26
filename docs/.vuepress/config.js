@@ -1,65 +1,65 @@
 module.exports = {
-  title: "PSP 2.0 repository template",
-  description: "A PSP 2.0 documentation demo using VuePress",
+  title: 'PSP 2.0 app-seed docs',
+  description: 'PSP 2.0 app seed / starter template documentation using VuePress',
   head: [
     [
-      "link",
+      'link',
       {
-        rel: "stylesheet",
-        href: "https://use.fontawesome.com/releases/v5.2.0/css/all.css",
+        rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.2.0/css/all.css',
         integrity:
-          "sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ",
-        crossorigin: "anonymous"
+          'sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ',
+        crossorigin: 'anonymous'
       }
     ]
   ],
-  base: "/repo-template/",
+  base: '/',
   serviceWorker: true,
   markdown: {
     lineNumbers: true,
     config: md => {
-      md.use(require("markdown-it-footnote"));
-      md.use(require("markdown-it-sub"));
-      md.use(require("markdown-it-sup"));
-      md.use(require("markdown-it-ins"));
-      md.use(require("markdown-it-mark"));
-      md.use(require("markdown-it-deflist"));
-      md.use(require("markdown-it-abbr"));
+      md.use(require('markdown-it-footnote'))
+      md.use(require('markdown-it-sub'))
+      md.use(require('markdown-it-sup'))
+      md.use(require('markdown-it-ins'))
+      md.use(require('markdown-it-mark'))
+      md.use(require('markdown-it-deflist'))
+      md.use(require('markdown-it-abbr'))
     }
   },
-  lastUpdated: "Last Updated",
+  lastUpdated: 'Last Updated',
   themeConfig: {
     sidebar: true,
     // Assumes GitHub. Can also be a full GitLab url.
-    repo: "pspusa/repo-template",
+    repo: 'pspusa/app-seed',
     // Customising the header label
     // Defaults to "GitHub"/"GitLab"/"Bitbucket" depending on `themeConfig.repo`
-    repoLabel: "GitHub",
+    repoLabel: 'GitHub',
 
     // Optional options for generating "Edit this page" link
 
     // if your docs are in a different repo from your main project:
-    //docsRepo: "pspusa/vuepress",
+    // docsRepo: "pspusa/vuepress",
     // if your docs are not at the root of the repo:
-    docsDir: "docs",
+    docsDir: 'docs',
     // if your docs are in a specific branch (defaults to 'master'):
-    docsBranch: "master",
+    docsBranch: 'master',
     // defaults to false, set to true to enable
     editLinks: true,
     serviceWorker: {
       updatePopup: {
-        message: "New content is available.",
-        buttonText: "Refresh"
+        message: 'New content is available.',
+        buttonText: 'Refresh'
       }
     },
     nav: [
       {
-        text: "Home",
-        link: "/"
+        text: 'Home',
+        link: '/'
       },
       {
-        text: "Guide",
-        link: "/guide/"
+        text: 'Guide',
+        link: '/guide/'
       },
       // {
       //   text: "Languages",
@@ -69,19 +69,19 @@ module.exports = {
       //   ]
       // },
       {
-        text: "PSPUSA Github",
-        link: "https://github.com/pspusa"
+        text: 'PSPUSA Github',
+        link: 'https://github.com/pspusa'
       }
     ],
-    sidebar: ["/", "/guide/"],
+    sidebar: ['/', '/guide/'],
     locales: {
-      "/": {
+      '/': {
         // text for the language dropdown
-        selectText: "Languages",
+        selectText: 'Languages',
         // label for this locale in the language dropdown
-        label: "English",
+        label: 'English',
         // text for the edit-on-github link
-        editLinkText: "Edit this page on GitHub"
+        editLinkText: 'Edit this page on GitHub'
         // algolia docsearch options for current locale
       }
     }
@@ -89,26 +89,20 @@ module.exports = {
   locales: {
     // The key is the path for the locale to be nested under.
     // As a special case, the default locale can use '/' as its path.
-    "/": {
-      lang: "en-US", // this will be set as the lang attribute on <html>
-      title: "PSP 2.0 repository template",
-      description: "A PSP 2.0 documentation demo using VuePress"
-    },
-    "/es/": {
-      lang: "es-US",
-      title: "Plantilla de repositorio de PSP 2.0",
-      description:
-        "Una demostración de documentación de PSP 2.0 usando VuePress"
+    '/': {
+      lang: 'en-US', // this will be set as the lang attribute on <html>
+      title: 'PSP 2.0 app-seed docs',
+      description: 'PSP 2.0 app seed / starter template documentation'
     },
 
-    configureWebpack() {
+    configureWebpack () {
       return {
         resolve: {
           alias: {
-            "@public": path.join(__dirname, "./public")
+            '@public': path.join(__dirname, './public')
           }
         }
-      };
+      }
     }
   }
-};
+}
