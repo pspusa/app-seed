@@ -11,7 +11,7 @@
     "docs:build": "vuepress build docs",
     "start": "concurrently 'npm run serve' 'npm run docs:dev'",
     "serve": "vue-cli-service serve --open",
-    "build": "vue-cli-service build && cd dist && surge $(pwd) app-seed.psplabs.org && open https://app-seed.psplabs.org && cd .."
+    "build": "vue-cli-service build --dest ./dist && vuepress build docs"
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",

@@ -13,7 +13,8 @@ module.exports = {
       }
     ]
   ],
-  base: '/',
+  base: '/docs',
+  dest: './dist/docs',
   serviceWorker: true,
   markdown: {
     lineNumbers: true,

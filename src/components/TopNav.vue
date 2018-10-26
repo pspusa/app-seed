@@ -16,7 +16,7 @@
 
       <div class="navbar-end">
           <router-link class="navbar-item" to="/" :key="$route.fullPath">Home</router-link>
-          <a class="navbar-item" :href="docsurl">Docs</a>
+          <a class="navbar-item" href="/docs">Docs</a>
 
         </div>
         <!-- <div class="navbar-item has-dropdown is-hoverable">
@@ -34,19 +34,12 @@
 </template>
 
 <script>
-const url = require('url')
-
-let _url = url.parse(window.location.toString());
-let domain = _url.hostname;
-let port = Number(_url.port);
-let docsurl = _url.protocol +'//' + domain+':'+(1+port);
 
 export default {
   name: "topnav",
   data: function() {
     return {
-      isActive: false,
-      docsurl: docsurl
+      isActive: false
     };
   },
 
