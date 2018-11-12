@@ -9,7 +9,7 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "start": "concurrently 'npm run serve' 'npm run docs:dev'",
+    "start": "concurrently 'npm run serve'",
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build --dest ./dist && vuepress build docs"
   },
@@ -23,6 +23,7 @@
     "buefy": "^0.6.6",
     "bulma-extensions": "^2.2.1",
     "config": "^2.0.1",
+    "dotenv": "^6.1.0",
     "font-awesome": "^4.7.0",
     "graphql": "^0.13.2",
     "graphql-tag": "^2.9.2",

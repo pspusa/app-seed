@@ -1,4 +1,9 @@
 import Vue from 'vue'
+
+import config from 'config'
+
+console.log(config)
+
 import App from './App.vue'
 import router from './router'
 
